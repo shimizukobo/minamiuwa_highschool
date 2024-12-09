@@ -1,1 +1,1 @@
-# minamiuwa_highschoolhy1gv3
+# minamiuwa_highschool
