@@ -1,1 +1,0 @@
-# minamiuwa_highschoolhy1gv3
