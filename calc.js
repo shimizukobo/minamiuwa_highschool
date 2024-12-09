@@ -77,7 +77,7 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: 'tree',
+            name: 'iwashi',
             modelName: 'https://shimizukobo.github.io/minamiuwa_highschool/assets/asset.glb',
             location: {
                 lat: 32.96302626084227,
@@ -119,10 +119,10 @@ alert("\nちゃんと撮れるかな ver1.0.0\nイワシンボルを見るブラ
 //        model.setAttribute('look-at', '[gps-camera]');    //正面を向ける
         model.setAttribute('look-at', '');   //向きを固定する
         if(cal.distance >= 500){
-jsonAltitude = -(jsonAltitude*(cal.newDistance/cal.distance))+300;
+jsonAltitude = -(jsonAltitude*(cal.newDistance/cal.distance))+10;
             model.setAttribute('gps-entity-place', `latitude: ${cal.newPosition[0]}; longitude: ${cal.newPosition[1]};`);
         }else {
-jsonAltitude = -jsonAltitude+300;
+jsonAltitude = -jsonAltitude+10;
             model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         }
         model.setAttribute('gltf-model', `${modelName}`);
