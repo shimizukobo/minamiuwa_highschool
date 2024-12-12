@@ -119,11 +119,11 @@ alert("\nちゃんと撮れるかな ver1.0.0\nイワシンボルを見るブラ
 //        model.setAttribute('look-at', '[gps-camera]');    //正面を向ける
         model.setAttribute('look-at', '');   //向きを固定する
         if(cal.distance >= 500){
-jsonAltitude = jsonAltitude*((cal.distance-cal.newDistance)/cal.distance)+10;
+jsonAltitude = (10-jsonAltitude)*(cal.newDistance/cal.distance)+jsonAltitude;
 //jsonAltitude = -(jsonAltitude*(cal.newDistance/cal.distance))+10;
             model.setAttribute('gps-entity-place', `latitude: ${cal.newPosition[0]}; longitude: ${cal.newPosition[1]};`);
         }else {
-jsonAltitude = -jsonAltitude+10;
+jsonAltitude = 10-jsonAltitude;
             model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         }
         model.setAttribute('gltf-model', `${modelName}`);
